@@ -3,6 +3,7 @@ import { AlertController } from '@ionic/angular';
 // import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 import { TextToSpeech } from '@capacitor-community/text-to-speech';
 import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
+import { GetCodigoMorseService } from '../services/get-codigo-morse.service';
 
 declare var speechSynthesis: SpeechSynthesis;
 
@@ -15,7 +16,8 @@ declare var speechSynthesis: SpeechSynthesis;
 export class HomePage {
 
   constructor(public alertController: AlertController,  
-    private speechRecognition: SpeechRecognition) {}
+    private speechRecognition: SpeechRecognition,
+    private getCodigoMorseService: GetCodigoMorseService) {}
 
   textoToMorse:string = '';
   morseToTexto:string = '';
@@ -239,5 +241,15 @@ export class HomePage {
   }
 
 
+  data: any;
+  textoAmorse(){
+    if(this.textoToMorse != null && this.textoToMorse != ""){
+      this.getCodigoMorseService.getData(this.textoToMorse).subscribe((response) => {
+        this.data = response;
+        this.morseToTexto = this.data;
+      });
+    }
+    
+  }
 
 }
