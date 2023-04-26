@@ -1,0 +1,7 @@
+{
+  "name": "codigoMorse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

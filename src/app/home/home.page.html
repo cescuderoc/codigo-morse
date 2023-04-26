@@ -1,0 +1,88 @@
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Content</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">This is the menu content.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Traductor morse...</ion-card-title>
+        <ion-card-subtitle>a morsear!</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        
+        <ion-grid>
+          <ion-row>
+            <ion-col offset="1" size="8">
+              <ion-textarea [(ngModel)]="textoToMorse"
+              (keyup)="toMorse()"
+              label="Ingrese texto" 
+              [autoGrow]="true"
+              labelPlacement="floating" fill="outline" 
+              placeholder="Ingrese texto"></ion-textarea>
+            </ion-col>
+            <ion-col size="3">
+              <ion-row>
+                <!-- <ion-col size="6" style="padding-left: 0;padding-right: 0;"> -->
+                  <!-- <ion-button (click)="toMorse()" color="primary" style="width: -moz-available;">Morse
+                    <ion-icon name="document-text-outline"></ion-icon>
+                  </ion-button> -->
+                <!-- </ion-col> -->
+                <ion-col style="padding-left: 0;padding-right: 0;">
+                  <ion-button (click)="listenTexto()" color="primary" style="width: -moz-available;">
+                    <ion-icon name="volume-medium-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+    
+          <ion-row>
+            <ion-col offset="1" size="8">
+              <ion-textarea [(ngModel)]="morseToTexto"
+              (keyup)="toTexto()"
+              label="Ingrese morse" 
+              [autoGrow]="true"
+              labelPlacement="floating" fill="outline" 
+              placeholder="Ingrese morse"></ion-textarea>
+            </ion-col>
+            <ion-col size="3">
+              <ion-row>
+                <!-- <ion-col size="6" style="padding-left: 0;padding-right: 0;">
+                  <ion-button (click)="toTexto()" color="primary" style="width: -moz-available;">Texto
+                    <ion-icon name="document-text-outline"></ion-icon>
+                  </ion-button>
+                </ion-col> -->
+                <ion-col style="padding-left: 0;padding-right: 0;">
+                  <ion-button (click)="listenMorse()" color="primary" style="width: -moz-available;">
+                    <ion-icon name="volume-medium-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+
+  
+    
+    
+  </ion-content>
+</div>
