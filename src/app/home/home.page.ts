@@ -15,9 +15,8 @@ declare var speechSynthesis: SpeechSynthesis;
 })
 export class HomePage {
 
-  constructor(public alertController: AlertController,  
-    private speechRecognition: SpeechRecognition,
-    private getCodigoMorseService: GetCodigoMorseService) {}
+  constructor(public alertController: AlertController, 
+    public getCodigoMorseService: GetCodigoMorseService) {}
 
   textoToMorse:string = '';
   morseToTexto:string = '';

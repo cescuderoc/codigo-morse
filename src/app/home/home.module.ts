@@ -5,10 +5,6 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-// import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
-import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
-
-
 
 @NgModule({
   imports: [
@@ -17,7 +13,7 @@ import { SpeechRecognition } from '@ionic-native/speech-recognition/ngx';
     IonicModule,
     HomePageRoutingModule
   ],
-  providers: [SpeechRecognition],
+  providers: [],
   declarations: [HomePage]
 })
 export class HomePageModule {}

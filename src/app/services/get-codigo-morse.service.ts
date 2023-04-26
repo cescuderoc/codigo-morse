@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 
 
 @Injectable({
@@ -20,6 +20,6 @@ export class GetCodigoMorseService {
       'texto':texto
     };
     //se consulta al servicio
-    return this.http.post('https://example.com/api/data', params);
+    return this.http.get('http://localhost:3000/api');
   }
 }
